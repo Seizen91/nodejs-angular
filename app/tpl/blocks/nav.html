@@ -1,0 +1,53 @@
+<!-- list -->
+<ul class="nav">
+  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+    <span>菜单栏</span>
+  </li>
+  <li ng-class="{active:$state.includes('app.campus')}">
+    <a href class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-list"></i>
+      <span class="font-bold">校园管理</span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span>校园管理</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.campus.teacher">
+          <span>教师管理</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <li ng-class="{active:$state.includes('app.system')}">
+    <a href class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-list"></i>
+      <span class="font-bold">系统管理</span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span>系统管理</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.system.systemInfo">
+          <span>系统说明</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+  </ul>
+
+<!-- / list -->

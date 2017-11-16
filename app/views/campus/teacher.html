@@ -1,0 +1,74 @@
+<div class="bg-light lter b-b wrapper-md">
+    <h1 class="m-n font-thin h4"> 教师管理</h1>
+</div>
+<div class="wrapper-md" ng-controller="TeacherCtrl">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="col-sm-3">
+                <form class="form-inline" role="form">
+                    <div class="form-group">
+                        <label>教师工号:</label>
+                        <input type="text" class="form-control" ng-model="teacherNumber" placeholder="请输入教师工号">
+                    </div>
+                </form>
+            </div>
+           <!-- <div class="col-sm-3">
+                <form class="form-inline" role="form">
+                    <div class="form-group">
+                        <label>教师姓名:</label>
+                        <input type="text" class="form-control" id="teacherName" ng-model="teacherName" placeholder="请输入教师姓名">
+                    </div>
+                </form>
+            </div>-->
+            <div class="col-sm-4">
+                <button class="btn btn-primary btn-addon xw100" ng-click="addTeacher()"><i class="fa fa-plus"></i>新增</button>
+                <button class="btn btn-info btn-addon xw100" ng-click="queryTeacher()"><i class="fa fa-search"></i>查询</button>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <div style="height: 10px"></div>
+            <table class="table table-striped m-b-none table-hover text-center" id="teacherTb">
+                <thead>
+                <tr>
+                    <th class="text-center sorting_disabled" style="width: 5%">
+                        <label class="i-checks m-b-none"><input type="checkbox" id="chkAll" /><i></i></label>
+                    </th>
+                    <!-- <th class="text-center" style="display: none">教师ID</th>-->
+                    <th class="text-center" style="width:15%">工号</th>
+                    <th class="text-center" style="width:15%">姓名</th>
+                    <th class="text-center" style="width:20%">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!--新增或修改页面-->
+    <div id="addContent" class="panel  panel-default" style="display: none; margin: 10px; padding: 0px;">
+        <div class="panel-body" style="margin: 0px; margin-top: -10px;">
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <label class="form-label">教师工号：</label>
+                    <input type="text" class="form-control" id="tNumber1">
+                </div>
+            </form>
+            <form class="form-inline" role="form" style="margin-top: 10px">
+                <div class="form-group">
+                    <label class="form-label">教师姓名：</label>
+                    <input type="text" class="form-control" id="tName1">
+                </div>
+            </form>
+            <div class="panel-body">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3">
+                    <button class="btn btn-primary btn-addon xw100" ng-click="submitData()">提交</button>
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn btn-danger btn-addon xw100" ng-click="cancelData()">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
